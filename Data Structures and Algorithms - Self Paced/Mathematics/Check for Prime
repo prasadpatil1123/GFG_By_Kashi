@@ -1,0 +1,90 @@
+Check for Prime
+
+--------------------------------------------
+// Naive Method
+
+//boolean in Java
+
+bool isPrime(int n)
+{
+	if( n == 1 )
+		return false;
+
+	for(int i = 2; i <= n ; i++)
+	{
+		if(n % i == 0)
+
+		retrun false;
+	}
+	return true;
+}
+
+--------------------------------------------
+
+the time complexity is O(n).
+
+The space complexity of the isPrime function is O(1) 
+--------------------------------------------
+
+Efficient Method: 
+
+Idea: Divisors always appear in pairs
+
+if (x , y) is a pair 
+  x * y = n
+
+  and if x <= y
+  x * x <= n
+  x <= sqrt(n) 
+--------------------------------------------
+
+// boolean in java
+
+bool isPrime(int n)
+{
+	if(n == 1)
+	return false;
+
+	for(int i = 2 ; i * i < = n ; i++ )
+	{
+		if(n % i == 0)
+		 	return false;
+	}
+	return true;
+}
+--------------------------------------------
+
+the time complexity is O(sqrt(n)).
+
+The space complexity of the isPrime function is O(1) 
+
+--------------------------------------------
+More Efficient Method(for Large n)
+
+idea: By checking n % 2 == 0 & n % 3 == 0,
+we can save many iterastion for large n.
+
+--------------------------------------------
+
+More Efficient Method(for Large n)
+
+// boolean in Java
+
+bool is Prime(int n)
+{
+	if( n == 1)
+	return false;
+
+	if( n == 2 || n == 3)
+	return true;
+
+	if( n % 2 == 0 || n % 3 == 0 )
+	return false;
+
+	if( int i = 5; i * i < = n ; i= i+6)
+	{
+		if( n % i == 0 || n % (i+2) == 0)
+		return false;
+	}
+	return true;
+}
