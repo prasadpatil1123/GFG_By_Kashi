@@ -1,0 +1,67 @@
+Sieve of Eratosthenes
+
+Naive Solution 
+
+void printPrimes(int n)
+{
+	for(int i =2; i <= n; i++)
+	{
+		if( isPrime(i))
+			print(i);
+	}
+}
+
+--------------------------------------------
+Naive Solution 
+Time Complexity: O(n*sqrt(n))
+
+--------------------------------------------
+
+Optimized Implementation
+
+void sieve(int n)
+{
+	vector<bool> isPrime(n+1, true);
+
+	for(int i =2; i * i <= n; i++)
+	{
+		if( isPrime [i])
+		{
+			for(int j = i * i; j < = n; j = j + i)
+
+			isPrime[j] = false;
+		}
+	}
+
+	for( int i = 2; i <= n; i++)
+	{
+		if(isPrime[i])
+			cout << i << " ";
+	}
+}
+
+--------------------------------------------
+
+Shorten Implementation of the optimized Sieve
+
+void sieve(int n)
+{
+	vector <bool> isPrime(n+1, true);
+
+	for(int i =2 ; i < = n ; i++)
+	{
+		if(isPrime(i))
+
+		{
+
+			cout << i << " "
+			for( int j = i*i; j <= n; j = j +i)
+			{
+
+			isPrime[j] = false;
+			}
+		}
+	}
+}
+
+Time Complexity: O( n log log n)
