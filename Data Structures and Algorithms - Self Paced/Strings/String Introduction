@@ -1,0 +1,9 @@
+String Introduction
+
+- Sequence of Character
+- small Set
+- Contiguous integer value for 'a' to '3' 
+	and 'A' to 'Z' in both ASCII and UTF - 16
+
+char: C/c++ =>  ASCII - 8 BIT also suppoert warChar_t
+	  JAVA  => 	UTF-16 - 16 BIT also supports byte
