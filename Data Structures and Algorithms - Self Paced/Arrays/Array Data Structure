@@ -1,0 +1,90 @@
+Array Data Structure
+- contiguous Memory
+Advantages 
+	- Random Access
+	- Cache Friendliness
+
+Types Of Array 
+-> Fixed sized Arrays
+
+language: C/C++
+
+int arr[100] // stack Allocated
+int arr[n] // stack Allocated
+int *arr = new int[n] // Heap Allocated
+int arr[] = {10,15,30,40}; // stack Allocated
+
+language: Java - All array allocated in Heap
+
+int []arr = new int [100];
+int []arr = new int [n];
+int arr[] = {10,15,20};
+
+-> Dynamic Sized Arrays
+Resize Automatically
+C++: Vector
+Java: ArrayList
+Python: list
+
+Vectors in C++
+
+Advantages of vectors:
+1. Dynamic size
+2. Rich Library function - find, erase, insert etc
+3. Easy to know size
+4. No need to pass size.
+5. Can be returned from a function
+6. By default initialised with default values.
+7. We can copy a vector to other i.e. v1 = v2;
+
+Arraylist in Java 
+
+import java.util.ArrayList;
+
+class Test {
+  public static void main(String[] args) {
+    ArrayList<Integer> al = new ArrayList<>();
+    al.add(10);
+    al.add(20);
+    al.add(30);
+    System.out.println(al);
+  }
+}
+
+Operations on Array:
+
+I/P : {10, 5, 25, 7}
+
+	x = 5;
+
+O/P : 1
+
+I/P : {10, 5, 25, 7}
+
+	x = 15;
+
+O/P : -1
+
+int search(int arr[], int n, int x)   // Linear Search
+{
+	for(int i = 0; i < n ; --i){
+		if(arr[i] == x){
+		return i;
+		}
+	}
+ return -1;
+}
+
+Operaration on Array - insert the new element
+
+-> zero element in the arrsy st mid or starting positions. 
+
+int insert(int arr[], int n , int x, int cap, int pos)
+{
+	if(n == cap){
+		retrun 0;
+	}
+	int idx = pos - 1;
+	for(int)
+
+}
